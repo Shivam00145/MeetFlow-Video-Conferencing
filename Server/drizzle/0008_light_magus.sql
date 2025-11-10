@@ -1,0 +1,1 @@
+ALTER TABLE `history` MODIFY COLUMN `meetingCode` varchar(100) NOT NULL;

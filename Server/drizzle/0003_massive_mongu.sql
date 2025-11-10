@@ -1,0 +1,1 @@
+ALTER TABLE `contact-messages` ADD `message` varchar(500) NOT NULL;

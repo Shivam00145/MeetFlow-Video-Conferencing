@@ -1,0 +1,64 @@
+.admin-container{
+    width: 100%;
+    max-height: 80vh;
+    margin: 0 auto;
+    padding-block: 40px;
+    padding-inline: 20px;
+    margin-bottom: 50px;
+}
+
+.ad-container{
+    max-height: 60vh;
+    width: 80vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 2px;
+    overflow-y:scroll ;
+}
+
+.card{
+    height: 120px;
+    background-color: white;
+    border: solid white 1px;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 1px;
+    margin-right: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & div{
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        overflow-wrap: break-word;    
+        word-break: break-word;      
+        white-space: normal;           
+        overflow-x: hidden; 
+    }
+}
+
+.delete-icon{
+    height: 40px;
+}
+
+.delete-icon svg{
+    color: black;
+}
+
+.edit-icon{
+    height: 40px;
+}
+
+@media (width <=780px){
+    .ad-container{
+        width: 90vw;
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,42 @@
+.history-container{
+    width: 100vw;
+    height: 90vh;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.history{
+    width: 80vw;
+    max-height: 85vh;
+    margin: 0 auto;
+  
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    padding: 30px;
+    overflow-y:scroll ;
+}
+
+.card{
+    height: 80px;
+    background-color: white;
+    border: solid white 1px;
+    border-radius: 5px;
+
+    padding: 20px;
+    margin: 1px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete-icon svg{
+    color: black;
+}
+
+@media (width <= 770px) { 
+    .history{
+        width: 90vw;
+        grid-template-columns: 1fr;
+    }
+}

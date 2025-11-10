@@ -1,0 +1,1 @@
+ALTER TABLE `contact-messages` DROP COLUMN `name`;

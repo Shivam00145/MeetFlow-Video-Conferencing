@@ -1,0 +1,34 @@
+.Home{
+    width: 100vw;
+    height: 80vh;
+    background-image: url("../HomeBack.jpg");
+    background-size: cover;
+}
+
+.meetContainer {
+    display: flex;
+    padding-inline: 20px;
+    height: 80vh;
+    gap: 10vw;
+    justify-content: center;
+}
+
+.leftPanel {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+
+    & h2{
+        font-size: 2rem;
+    }
+}
+
+.join{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+

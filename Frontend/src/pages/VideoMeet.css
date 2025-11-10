@@ -1,0 +1,415 @@
+/* Lobby */
+
+.video-background{
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../videoBackground.jpg");
+    background-size: cover;
+    position: relative;
+}
+
+.video-container{
+    width: 60%;
+    height: 80%;
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    & h2{
+        color: white;
+        margin-top: 2rem;
+    }
+
+    & .video-lobby{
+        background-color: whitesmoke;
+        width: 50%;
+        height: 50%;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+        & video{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+
+
+@media (width <= 880px) {
+    .video-container{
+        width: 80%;
+        height: 80%;
+
+        & .video-lobby{
+            width: 80%;
+            height: 60%;
+        }
+    }
+}
+
+
+/* VideoMeetContainer */
+
+.videoMeetContainer{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background: rgb(1, 4, 48);
+
+    display: flex;
+    flex-direction: column;
+  
+
+    overflow-y: auto;      
+    overflow-x: hidden;    
+    box-sizing: border-box;
+   
+}
+
+.userVideo{
+    position: absolute;
+    position: fixed;
+    bottom: 10vh;
+    height: 30vh;
+    width: auto;
+    right: 2rem;
+  
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+.focus-container{
+    width: 100vw;
+    text-align: center;
+
+    padding: 20px;
+}
+
+.focusVideo{
+    box-shadow: 0 0 10px rgba(255,0,255,0.5), 0 0 20px rgba(255,0,255,0.3);
+    width: 60%;
+}
+
+.bar{
+    width: 55%;
+    height: 30px;
+    background-color: transparent;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+  
+}
+
+.focus-username{
+    position: relative;
+    top: 40px;
+    font-size: 20px;
+    color: black;
+    opacity: 0.5;
+}
+
+.focus-icon{
+    height: 30px;
+    width: 30px;
+    color: red;
+    position: relative;
+    top: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    z-index: 10;
+}
+
+.focus-icon:hover{
+    box-shadow: #ff0000 0px 0px 0px 1px inset, #ff0000 0px 0px 0px 1px;
+}
+
+.focus-icon:hover svg {
+    font-size: 30px;
+    opacity: 0.5;
+}
+
+.joinedVideos {
+    display: flex;
+    justify-content: space-evenly;
+ 
+    padding: 20px;
+
+    padding-bottom: 100px;
+
+    flex-wrap: wrap;      
+
+    box-sizing: border-box;
+}
+
+.username{
+    position: relative;
+    font-size: 20px;
+    color: white;
+    opacity: 0.5;
+    top: 25px;
+    left: 35%;
+}
+
+
+.videos{
+    width: 25vw;
+    border-radius: 20px;
+}
+
+.private-message {
+    position: relative;
+    bottom: 20px;
+    right: 14%;
+    opacity: 0.7;
+}
+
+.private-message svg{
+    font-size: 30px;
+}
+
+.private-message:hover svg{
+    font-size: 35px;
+    color: aqua;
+}
+
+.buttonContainers{
+    background: rgb(10, 20, 48);
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+    text-align: center;
+    z-index: 10; 
+    
+    & button svg{
+        font-size: 2rem;
+        margin: 0.8rem;
+    }
+
+    & button:hover{
+        border: 2px blue solid;
+    }
+}
+
+
+
+.chatRoom{
+    position: absolute;
+    background: white;
+    height: 90vh;
+    width: 30vw;
+    border-radius: 10px;
+    left: 0;
+    z-index: 30;
+
+    & .chat-heading{
+        width: 100%;
+        height: 3rem;
+        background-color: #f5f5f5;
+        border-radius: 10px 10px 0 0;
+        text-align: center;
+        padding: 5px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
+
+.message-close svg{
+    color: red;
+}
+
+.showMotion{
+    animation: motion 0.5s linear;
+}
+
+@keyframes motion {
+    from{
+        left: -80vh;
+    }
+    to{
+        left: 0;
+    }
+}
+
+.chat-container{
+    position: relative;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.chattingArea{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    bottom: 7vh;
+    align-items: end;
+    padding: 5px 5px; 
+    box-sizing: border-box;
+
+    background-color: white; 
+    min-height: 70px; 
+    z-index: 1;
+}
+
+.chattingArea fieldset {
+  border-radius: 30px;
+}
+
+
+.chattingArea > div {
+    flex-grow: 1; 
+    margin-right: 8px; 
+}
+
+.chattingArea button {    
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    flex-shrink: 0;
+    margin-bottom: 10px;
+
+    & svg {
+        font-size: 2rem;
+    }
+}
+
+.chattingDisplay {
+   
+    height: calc(100% - 70px);
+    overflow-y: auto;  
+    box-sizing: border-box;
+    padding: 10px; 
+    
+}
+
+.message-box {
+    background-color: #dcf8c6;
+    width: 50%;
+    border-radius: 30px;
+    padding: 20px;
+    margin: 10px;
+    overflow-wrap: break-word;    
+    word-break: break-word;     
+    white-space: normal;       
+    overflow-x: hidden;       
+}
+
+.message-box .message-username {
+    font-weight: bold;
+    text-decoration: underline;
+    color: blue;
+    margin-bottom: 5px;
+}
+
+.message-box .message-data {
+    font-size: small;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+}
+
+.message-box.mine {
+    margin-left: auto;
+    margin-right: 10px;
+
+    background-color: #dcf8c6; 
+}
+
+
+
+@media (width<=950px){
+    .private-message{
+        left: -60px;
+    }
+}
+
+@media (width<=850px){
+    .chatRoom{
+        width: 60vw;
+        z-index: 20;
+    }
+}
+
+@media (width<=780px){
+    .videos{
+        width: 40vw;
+    }
+
+    .focusVideo{
+    width: 80%;
+    }
+
+    .bar{
+        width: 78%;
+    }
+}
+
+@media (width<=500px){
+    .bar{
+        width:90%;
+    }
+    .userVideo{
+        height: 15vh;
+    }
+
+    .video-card{
+        width: 40vw;
+        margin-bottom: 2px;
+    }
+
+    .videos{
+        width: 40vw;
+    }
+
+    .private-message{
+        top: -20%;
+        left: 77%;
+    }
+
+    .private-message svg{
+        font-size: 25px;
+    }
+
+    .private-message:hover svg{
+        font-size: 27px;
+    }
+
+    .focusVideo{
+        width: 100%;
+    }
+}
+
+@media (width<=450px){
+    .chatRoom{
+        width: 100vw;
+    }
+
+    .private-message{
+        top: -21%;
+        left: 75%;
+    }
+
+    .private-message svg{
+        font-size: 22px;
+    }
+
+    .private-message:hover svg{
+        font-size: 23px;
+    }
+}

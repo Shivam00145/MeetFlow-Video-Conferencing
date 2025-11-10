@@ -1,0 +1,1 @@
+ALTER TABLE `contact-messages` MODIFY COLUMN `message` varchar(300) NOT NULL;
