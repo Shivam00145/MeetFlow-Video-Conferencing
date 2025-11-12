@@ -7,6 +7,7 @@ import cors from "cors";
 import {createServer} from "node:http";
 import {Server} from "socket.io";
 import { connectToSocket } from "./controllers/socketManager.js";
+import server_URL from "./environment.js"
 
 
 const app = express();
@@ -16,11 +17,11 @@ const io = connectToSocket(server);
 const Port = process.env.PORT || 8080;
 app.set("port", Port);
 
-const BASE_URL = process.env.FRONTEND_URL;
+
 
 app.use(cors(
     {
-        origin: BASE_URL,
+        origin: server_URL,
         methods: ["GET", "POST", "DELETE", "PATCH"],
         credentials: true,
     }
