@@ -27,11 +27,9 @@ import { ContactSchema } from "../validators/contactMessage_Validator.js";
 export const postRegister = async(req, res) => {
     if(req.user) return res.redirect("/");
 
-    console.log(req.body);
 
     const {data, error} = registerUserSchema.safeParse(req.body);
 
-    console.log(data);
 
     if(error){
         const extraDetails = error.issues.map((curElem) => curElem.message);

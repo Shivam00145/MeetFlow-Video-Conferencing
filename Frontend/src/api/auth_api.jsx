@@ -11,7 +11,6 @@ const api = axios.create({
 })
 
 export const postRegister = async (user) => {
-    console.log(user);
     return await api.post("/register", user);
 };
 
