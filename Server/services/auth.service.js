@@ -23,7 +23,7 @@ export const hashPassword = async(password) => {
 
 
 export const createUser = async({name, email, password}) => {
-    console.log(name, email, password);
+    
     return await db
                     .insert(Users)
                     .values({name, email, password})
